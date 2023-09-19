@@ -1,6 +1,9 @@
 import express, { Request, Response } from "express"
+import dotenv from 'dotenv'
+dotenv.config()
 
 const app = express()
+const port = process.env.SERVER_PORT
 
 interface WelCome {
     name: string
@@ -16,6 +19,8 @@ const data: Partial<WelCome> = {
 
 app.get("/", (req: Request, res: Response) => {
     res.send(data)
-});
+})
 
-app.listen(3080);
+app.listen(port, () => {
+    console.log(`server is listening at localhost:${port}`);
+})
