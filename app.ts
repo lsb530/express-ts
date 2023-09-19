@@ -1,5 +1,6 @@
 import express, { Request, Response } from 'express'
 import dotenv from 'dotenv'
+import postRouter from './router/PostRouter'
 
 dotenv.config()
 
@@ -21,6 +22,10 @@ const data: Partial<WelCome> = {
 app.get('/', (req: Request, res: Response) => {
   res.send(data)
 })
+
+app.use(express.json())
+app.set('json spaces', 2)
+app.use('/posts', postRouter)
 
 app.listen(port, () => {
   console.log(`server is listening at localhost:${port}`)
