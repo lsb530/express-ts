@@ -1,0 +1,27 @@
+# Node modules
+node_modules/
+
+# Environment variables
+.env
+
+# Distribution folder
+dist/
+
+# Logs
+*.log
+
+# IDEs and editors
+.vscode/
+.idea/
+
+# Cache
+.cache/
+
+# Temporary files
+*.tmp
+*.swp
+*.swo
+
+# OS generated files
+.DS_Store
+Thumbs.db
