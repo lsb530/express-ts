@@ -1,6 +1,7 @@
 {
   "name": "express-ts",
   "version": "1.0.0",
+  "author": "boki",
   "main": "app.ts",
   "license": "MIT",
   "scripts": {
