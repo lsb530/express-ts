@@ -1,0 +1,18 @@
+# stop .editorconfig files search on current file.
+root = true
+
+# 기본 설정(모든 파일에 적용)
+[*]
+charset = utf-8
+end_of_line = lf
+trim_trailing_whitespace = true
+insert_final_newline = true
+
+# JS, TS, JSX, TSX, JSON 파일에만 적용
+[*.{js,ts,jsx,tsx,json}]
+indent_style = space
+indent_size = 2
+
+# Markdown 파일에 대한 예외 설정
+[*.md]
+trim_trailing_whitespace = false
